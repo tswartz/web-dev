@@ -10,7 +10,6 @@ body * {
 
 .container {
 	margin: 0px auto;
-	width: 970px;
 }
 
 h1 {
@@ -30,15 +29,18 @@ nav {
 	background: black;
 }
 
-nav ul, nav li {
+nav * {
 	display: inline;
+}
+
+nav > * {
+	padding: 0px;
+	margin: 14px 20px;
+	vertical-align: middle;
 }
 
 nav ul {
 	list-style: none;
-	padding: 0px;
-	margin-left: 20px;
-	margin-right: 20px;
 }
 
 nav li {
@@ -48,6 +50,20 @@ nav li {
 nav a {
 	color: #eee;
 	text-decoration: none;
+}
+
+#online-u-link {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+#menu-icon {
+	display: none;
+	background: black;
+	border: 1px solid#424242;
+	border-radius: 4px;
+	padding: 7px 10px;
+	margin: 9px 20px;
 }
 
 .active-link {
@@ -148,4 +164,31 @@ nav a {
 	background: #f9f9f9;
 	border: solid #d8d8d8;
 	border-width: 2px 0px;
+}
+
+
+@media screen and (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	.container {
+		width: 768px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 600px;
+	}
+
+	#menu-icon {
+		display: inline;
+	}
+
+	ul.left-links, ul.right-links {
+		display: none;
+	}
 }
