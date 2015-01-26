@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Profile</title>
+		<link href="styles.css" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<ul class="left-links">
+						<li>
+							<a href="#">OnlineU</a>
+						</li>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Catalog</a>
+						</li>
+						<li>
+							<a class="active-link" href="#">Profile</a>
+						</li>
+					</ul>
+					<ul class="right-links">
+						<li>
+							<a href="#">Logout</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<h1>Profile</h1>
+				<hr/>
+				<form class="profile-form">
+					<div class="labels">
+						<label for="first-name">First Name</label>
+						<label for="last-name">Last Name</label>
+						<label for="email">Email</label>
+						<label for="password">Password</label>
+					</div>
+					<div class="input-fields">
+						<input id="first-name" type="text" name="first-name" placeholder="First Name">
+						<input id="last-name" type="text" name="last-name" placeholder="Last Name">
+						<input id="email" type="text" name="email" placeholder="Email">
+						<input id="password" type="password" name="password" placeholder="Password">
+						<button class="flat-button" type="submit">Update</button>
+					</div>
+				</form>
+				<h2>Courses Created</h2>
+				<table class="courses-created-table">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Category</th>
+							<th>Created</th>
+							<th>
+								<button id="add-button" class="flat-button icon-button"><i class="fa fa-plus"></i></button>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>java 123</td>
+							<td>Java</td>
+							<td>1/18/2015</td>
+							<td>
+								<button class="flat-button icon-button"><i class="fa fa-pencil"></i></button>
+							</td>
+						</tr>
+						<tr>
+							<td>java 234</td>
+							<td>Java</td>
+							<td>1/18/2015</td>
+							<td>
+								<button class="flat-button icon-button"><i class="fa fa-pencil"/></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</main>
+		</div>
+	</body>
+</html>

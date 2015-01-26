@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Study List</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Study Review</a>
+          </li>
+          <li>
+            <a href="#">Study List</a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+          <li>
+            <a href="#">Feedback</a>
+          </li>
+          <li>
+            <a href="#">Logout</a>
+          </li>
+          <li>
+            <a href="#">Alice</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Study List</h1>
+      <div>
+        <a href="studyNew.html">New Study</a>
+      </div>
+      <div>
+        <a href="">Require Action</a>
+      </div>
+      <div>
+        <a href="">All Studies</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">ID</th>
+            <th colspan="2">Date</th>
+            <th rowspan="2">Title</th>
+            <th rowspan="2">Principal</th>
+            <th rowspan="2">Status</th>
+            <th rowspan="2">Role</th>
+            <th rowspan="2">
+              <a href="">Refresh</a>
+            </th>
+          </tr>
+          <tr>
+            <th>Submitted</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>
+              <input id="id" type="text" name="id">
+            </td>
+            <td>
+              <input id="submitted" type="datetime-local" name="submitted">
+            </td>
+            <td>
+              <input id="due" type="datetime-local" name="due">
+            </td>
+            <td>
+              <input id="title" type="text" name="title">
+            </td>
+            <td>
+              <input id="principal" type="text" name="principal">
+            </td>
+            <td>
+              <select id="status" name="status">
+                <option value="done">Done</option>
+                <option value="in-review">In Review</option>
+                <option value="in-progress">In Progress</option>
+                <option value="cancelled">Cancelled</option>
+              </select>
+            </td>
+            <td>
+              <select id="role" name="role">
+                <option value="nurse">Nurse</option>
+                <option value="nutritionist">Nutritionist</option>
+                <option value="investigator">Investigator</option>
+                <option value="principal">Principal</option>
+                <option value="lead">Lead</option>
+              </select>
+            </td>
+            <td>
+              <a href="">Clear</a>
+            </td>
+          </tr>
+          <tr>
+            <td>123</td>
+            <td>1/2/2015</td>
+            <td>2/3/2015</td>
+            <td>Title 123</td>
+            <td>Alice</td>
+            <td>Done</td>
+            <td>Role 123</td>
+            <td>
+              <a href="">i</a>
+              <a href="">x</a>
+            </td>
+          </tr>
+          <tr>
+            <td>234</td>
+            <td>2/3/2015</td>
+            <td>3/4/2015</td>
+            <td>Title 234</td>
+            <td>Bruce</td>
+            <td>In Review</td>
+            <td>Role 234</td>
+            <td>
+              <a href="">i</a> 
+              <a href="">x</a>
+            </td>
+          </tr>
+          <tr>
+            <td>345</td>
+            <td>3/4/2015</td>
+            <td>4/5/2015</td>
+            <td>Title 345</td>
+            <td>Charlie</td>
+            <td>Cancelled</td>
+            <td>Role 345</td>
+            <td>
+              <a href="">i</a>
+              <a href="">x</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+
+</html>
