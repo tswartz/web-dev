@@ -80,30 +80,21 @@ nav a {
 
 .profile-form {
 	width: 100%;
-	display: inline-flex;
 }
 
-.labels {
-	display: inline;
-	width: 15%
-}
-
-.labels label {
-	margin: 24px 30px 24px 0px;
-	font-weight: bold;
-	display: block;
+.profile-form div {
 	text-align: right;
 }
 
-.input-fields {
-	display: inline;
-	width: 85%
+.profile-form label {
+	width: 15%;
+	font-weight: bold;
+	margin-right: 20px;
 }
 
-.input-fields input {
+.profile-form input {
 	margin: 10px 0px;
-	width: 100%;
-	display: block;
+	width: 85%;
 	height: 34px;
 	padding: 6px 12px;
 	font-size: 14px;
@@ -171,11 +162,19 @@ nav a {
 	.container {
 		width: 970px;
 	}
+
+	.profile-form button {
+		margin-left: 145px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
 	.container {
 		width: 768px;
+	}
+
+	.profile-form button {
+		margin-left: 115px;
 	}
 }
 
@@ -191,4 +190,13 @@ nav a {
 	ul.left-links, ul.right-links {
 		display: none;
 	}
+
+	.profile-form div {
+		text-align: left;
+	}
+
+	.profile-form input {
+		width: 100%
+	}
+
 }
