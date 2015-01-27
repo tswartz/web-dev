@@ -52,6 +52,11 @@
     {
         text-align: justify;
     }
+
+    li
+    {
+	margin-bottom: 10px;
+    }
 </style>
 
 <style type="text/css" media="screen">
@@ -92,7 +97,7 @@
 
 <hr />
 
-<h1>Talia Swartz’s CS 4550 Home Page</h1>
+<h1>Talia Swartz - CS 4550 Home Page</h1>
 
 <p>
 My name is Talia. This is my webpage for CS 4550. Below are links to the assignments I have completed.
@@ -107,8 +112,23 @@ My name is Talia. This is my webpage for CS 4550. Below are links to the assignm
 <ol>
 
 	<li>
-		<a href="assignments/html/studyList.html" target="_blank">HTML Assignment</a>
-		<a href="fileview/default.aspx?~/assignments/html/studyList.html”>Source Code</a>
+		<div>
+			<a href="assignments/html/studyList.html" target="_blank">HTML Assignment</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/html/studyList.html" target="_blank">Source Code</a>
+		</div>
+	</li>
+	<li>
+		<div>
+			<a href="assignments/css/profile.html" target="_blank">CSS Assignment</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/css/profile.html" target="_blank">HTML Source Code</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/css/styles.css" target="_blank">CSS Source Code</a>
+		</div>
 	</li>
 
 </ol>
