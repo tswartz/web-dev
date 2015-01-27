@@ -12,7 +12,7 @@
 
 <meta charset='utf-8' />
 
-<title>Demo Home Page</title>
+<title>Talia Swartz - Home Page</title>
 
 <style type="text/css">
     ul.master_navigation
@@ -92,66 +92,26 @@
 
 <hr />
 
+<h1>Talia Swartz’s CS 4550 Home Page</h1>
+
 <p>
-<b>
-Here is a link to my <a href="assignments/html/studyList.html" target="_blank">HTML assignment</a>.
-</b>
+My name is Talia. This is my webpage for CS 4550. Below are links to the assignments I have completed.
 </p>
+
+<img src="homepage_pic.jpg" />
 
 <hr />
 
-<p>
-    <b>This demo page shows the navigation links that should appear
-    on the home page.</b>
-    It is not necessary that these links be at the top of the page
-    but they should be displayed nicely and be easy to find.  You
-    may alter the CSS on the page to change the placement and the
-    size of the links.
-</p>
+<h2>Assignments</h2>
 
-<hr />
+<ol>
 
-<p>
-    The home page may show some interesting content but its main
-    purpose should be to <i>provide navigation</i> to other pages
-    on your site.
-</p>
+	<li>
+		<a href="assignments/html/studyList.html" target="_blank">HTML Assignment</a>
+		<a href="fileview/default.aspx?~/assignments/html/studyList.html”>Source Code</a>
+	</li>
 
-<hr />
-
-<p>
-    It would be helpful if your home page shows your name and a
-    photo of yourself.  This will help us to get to know you. 
-</p>
-    
-<hr />
-
-<p>
-Here is a link to the
-<a href="story/index.htm" target="_blank">Story Utility</a>
-on this site so that you may explore this tool.
-</p>
-
-<p>
-Here is a link to the
-<a href="http://www.northeastern.edu/rasala/webstories.htm"
-        target="_blank">Web Development Stories</a>
-so that you may see a good collection of online documentation.
-</p>
-
-<p>
-This provides a model for using stories for documentation and
-for collections of experiments.
-</p>
-
-<hr />
-
-<p>
-None of the hints given above needs to be on your home page
-downstream but it is convenient to have them here at startup.
-</p>
-
-<hr />
+</ol>
 
 </div>
 
