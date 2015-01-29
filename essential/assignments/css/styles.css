@@ -2,14 +2,11 @@ body {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
 	color: #333;
+	margin: 0px;
 }
 
 body * {
 	box-sizing: border-box;
-}
-
-.container {
-	margin: 0px auto;
 }
 
 h1 {
@@ -24,58 +21,8 @@ h1, h2 {
 	font-weight: 200;
 }
 
-nav {
-	height: 50px;
-	background: black;
-}
-
-.horizontal-nav, .horizontal-nav * {
-	display: inline;
-}
-
-.horizontal-nav {
-	padding: 0px;
-	margin: 14px 20px;
-	vertical-align: middle;
-}
-
-header ul {
-	list-style: none;
-}
-
-.horizontal-nav li {
-	margin: 0px 10px;
-}
-
-header a {
-	color: #eee;
-	text-decoration: none;
-}
-
-#online-u-link {
-	font-size: 16px;
-	margin-right: 5px;
-}
-
-#menu-icon {
-	display: none;
-	background: black;
-	border: 1px solid#424242;
-	border-radius: 4px;
-	padding: 7px 10px;
-	margin: 9px 5px;
-}
-
-.active-link {
-	color: #fff;
-}
-
-.left-links {
-	float: left;
-}
-
-.right-links {
-	float: right;
+main {
+	margin-top: 60px;
 }
 
 .profile-form {
@@ -152,6 +99,7 @@ header a {
 
 .courses-created-table td:last-child, th:last-child {
 	text-align: right;
+	padding: 5px;
 }
 
 .courses-created-table tbody tr:nth-child(odd) {
@@ -160,33 +108,7 @@ header a {
 	border-width: 2px 0px;
 }
 
-
-@media screen and (min-width: 992px) {
-	.container {
-		width: 970px;
-	}
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-	.container {
-		width: 768px;
-	}
-
-}
-
-@media screen and (max-width: 768px) {
-	.container {
-		width: 600px;
-	}
-
-	#menu-icon {
-		display: inline;
-	}
-
-	ul.left-links, ul.right-links {
-		display: none;
-	}
+@media (max-width: 768px) {
 
 	.profile-form div {
 		text-align: left;
