@@ -63,25 +63,7 @@ header a {
 	border: 1px solid#424242;
 	border-radius: 4px;
 	padding: 7px 10px;
-	margin: 9px 20px;
-}
-
-.hide-mobile-nav {
-	display: none;
-}
-
-#mobile-nav {
-	background: black;
-	position: absolute;
-	margin-left: 512px;
-}
-
-#mobile-nav ul {
-	padding: 0px 20px;
-}
-
-#mobile-nav li {
-	padding: 5px 0px;
+	margin: 9px 5px;
 }
 
 .active-link {
