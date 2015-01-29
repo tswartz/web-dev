@@ -87,7 +87,6 @@ header a {
 }
 
 .profile-form label {
-	width: 15%;
 	font-weight: bold;
 	margin-right: 20px;
 }
@@ -102,6 +101,10 @@ header a {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.profile-form button {
+	margin-left: 15%;
 }
 
 .flat-button {
@@ -163,9 +166,6 @@ header a {
 		width: 970px;
 	}
 
-	.profile-form button {
-		margin-left: 145px;
-	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -173,9 +173,6 @@ header a {
 		width: 768px;
 	}
 
-	.profile-form button {
-		margin-left: 115px;
-	}
 }
 
 @media screen and (max-width: 768px) {
@@ -197,6 +194,10 @@ header a {
 
 	.profile-form input {
 		width: 100%
+	}
+
+	.profile-form button {
+		margin-left: 0px;
 	}
 
 }
