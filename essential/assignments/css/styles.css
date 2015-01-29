@@ -29,25 +29,25 @@ nav {
 	background: black;
 }
 
-nav * {
+.horizontal-nav, .horizontal-nav * {
 	display: inline;
 }
 
-nav > * {
+.horizontal-nav {
 	padding: 0px;
 	margin: 14px 20px;
 	vertical-align: middle;
 }
 
-nav ul {
+header ul {
 	list-style: none;
 }
 
-nav li {
+.horizontal-nav li {
 	margin: 0px 10px;
 }
 
-nav a {
+header a {
 	color: #eee;
 	text-decoration: none;
 }
@@ -64,6 +64,24 @@ nav a {
 	border-radius: 4px;
 	padding: 7px 10px;
 	margin: 9px 20px;
+}
+
+.hide-mobile-nav {
+	display: none;
+}
+
+#mobile-nav {
+	background: black;
+	position: absolute;
+	margin-left: 512px;
+}
+
+#mobile-nav ul {
+	padding: 0px 20px;
+}
+
+#mobile-nav li {
+	padding: 5px 0px;
 }
 
 .active-link {
