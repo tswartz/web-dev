@@ -25,6 +25,8 @@ main {
 	margin-top: 60px;
 }
 
+/* Profile Form */
+
 .profile-form {
 	width: 100%;
 }
@@ -79,6 +81,8 @@ main {
 	height: 38px;
 }
 
+/* Courses Created Table */
+
 .courses-created-table {
 	width: 100%;
 	border-collapse:collapse;
@@ -107,6 +111,8 @@ main {
 	border: solid #d8d8d8;
 	border-width: 2px 0px;
 }
+
+/* Custom Mobile Styling */
 
 @media (max-width: 768px) {
 
