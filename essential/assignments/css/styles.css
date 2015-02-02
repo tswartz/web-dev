@@ -22,7 +22,7 @@ h1, h2 {
 }
 
 main {
-	margin-top: 60px;
+	margin-top: 90px;
 }
 
 /* Profile Form */
@@ -32,6 +32,7 @@ main {
 }
 
 .profile-form div {
+	margin: 10px 0px;
 	text-align: right;
 }
 
@@ -41,7 +42,6 @@ main {
 }
 
 .profile-form input {
-	margin: 10px 0px;
 	width: 85%;
 	height: 34px;
 	padding: 6px 12px;
@@ -90,11 +90,6 @@ main {
 
 .courses-created-table tr {
 	height: 40px;
-}
-
-.courses-created-table td, th {
-	text-align: center;
-	padding: 5px;
 }
 
 .courses-created-table td:first-child, th:first-child {
