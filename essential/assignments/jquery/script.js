@@ -1,6 +1,6 @@
 var courses = [
-	{ name : "java 123", category : "PROG", dateCreated : "1/18/2015", description : "Awesome" },
-	{ name : "Java 234", category : "PROG", dateCreated : "1/18/2015", description : "Awesome" }
+	{ name : "java 123", category : "PROG", dateCreated : "2015-01-18", description : "Awesome" },
+	{ name : "Java 234", category : "PROG", dateCreated : "2015-01-18", description : "Awesome" }
 ];
 
 $(function () {
@@ -34,8 +34,7 @@ function removeCourse(e) {
 	  	message: "Are you sure you want to delete this course?",
 	  	callback: function(result) {
 	  		if (result) {
-				var removeButton = $(e.currentTarget);
-				var id = removeButton.attr('id')
+				var id = $(e.currentTarget).attr('id')
 				courses.splice(id, 1);
 				renderCourses(courses);
 	  		}
@@ -43,10 +42,30 @@ function removeCourse(e) {
 	});
 }
 
-function editCourse() {
+function editCourse(e) {
+	var clonedForm = $('#add-edit-form').clone();
+	var id = $(e.currentTarget).attr('id');
+	var course = courses[id];
+	for (var prop in course) {
+		var input = clonedForm.find('input#' + prop + ', select#' + prop);
+		if (input.length != 0) {
+			// for populating select tags
+			if (input.prop('tagName') == 'SELECT') {
+				var selectedOption = input.find('option[value=' + course[prop] + ']');
+				selectedOption.attr('selected', 'selected');
+			// for populating all other tags
+			} else {
+				input.attr('value', course[prop]);
+			}
+		}
+	};
+	openNewCourseDialog(clonedForm);
+}
+
+function openNewCourseDialog(form, callback) {
 	bootbox.dialog({
 		title: "Create New Course",
-	  	message: $('#add-edit-dialog').html(),
+	  	message: $(form).html(),
 	  	buttons: [
 	  		{
 		    	label: "Cancel",
@@ -55,16 +74,12 @@ function editCourse() {
 		    	label: "OK",
 		      	className: "btn-primary",
 		      	callback: function(e) {
-		      		console.log($('.modal-body #add-edit-form').find('input'));
-		        	console.log('great success');
+		      		$('.modal-body #add-edit-form').find('input');
+		      		callback();
 		      	}
 		    },
 	  	]
 	});
-}
-
-function openNewCourseDialog(form) {
-	
 }
 
 
