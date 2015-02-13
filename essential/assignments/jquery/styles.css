@@ -56,31 +56,6 @@ main {
 	margin-left: 15%;
 }
 
-.flat-button {
-	color: white;
-	background: #337ab7;
-	border: 1px solid #2e6da4;
-	border-radius: 4px;
-	padding: 6px 12px;
-	font-size: 14px;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	white-space: nowrap;
-	box-shadow: none;
-	cursor: pointer;
-}
-
-#add-button {
-	background: #449d44;
-	border-color: #398439;
-}
-
-.icon-button {
-	width: 38px;
-	height: 38px;
-}
-
 /* Courses Created Table */
 
 .courses-created-table {
