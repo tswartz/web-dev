@@ -99,3 +99,9 @@ main {
 	}
 
 }
+
+/* Edit/Add Dialog */
+
+#add-edit-form div {
+	margin: 10px 0px;
+}
