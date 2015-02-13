@@ -12,6 +12,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  		<script type="text/javascript" src="script.js"></script>
   	</head>
 
   	<body>
@@ -75,7 +76,7 @@
 						<label for="password">Password</label>
 						<input id="password" type="password" name="password" placeholder="Password">
 					</div>
-					<button class="flat-button" type="submit">Update</button>
+					<button class="btn btn-primary" type="submit">Update</button>
 				</form>
 				<h2>Courses Created</h2>
 				<table class="courses-created-table">
@@ -85,30 +86,23 @@
 							<th>Category</th>
 							<th>Created</th>
 							<th>
-								<button id="add-button" class="flat-button icon-button">
+								<button id="add-button" class="btn btn-success">
 									<i class="fa fa-plus"></i>
 								</button>
 							</th>
 						</tr>
 					</thead>
 					<tbody id="courses-created">
-						<tr>
-							<td>java 123</td>
-							<td>Java</td>
-							<td>1/18/2015</td>
+						<tr class="template">
+							<td class="name"></td>
+							<td class="category"></td>
+							<td class="dateCreated"></td>
 							<td>
-								<button class="flat-button icon-button">
+								<button class="btn btn-primary">
 									<i class="fa fa-pencil"></i>
 								</button>
-							</td>
-						</tr>
-						<tr>
-							<td>java 234</td>
-							<td>Java</td>
-							<td>1/18/2015</td>
-							<td>
-								<button class="flat-button icon-button">
-									<i class="fa fa-pencil"/></i>
+								<button class="btn btn-danger">
+									<i class="fa fa-pencil"></i>
 								</button>
 							</td>
 						</tr>
