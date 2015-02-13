@@ -102,6 +102,16 @@ main {
 
 /* Edit/Add Dialog */
 
+#add-edit-form {
+	width: 400px;
+	margin: 0px auto;
+}
+
 #add-edit-form div {
 	margin: 10px 0px;
+	text-align: right;
+}
+
+#add-edit-form input, #add-edit-form select {
+	width: 300px;
 }

@@ -48,7 +48,7 @@ function editCourse(e) {
 	var id = $(e.currentTarget).attr('id');
 	var course = courses[id];
 	for (var prop in course) {
-		var input = clonedForm.find('input#' + prop + ', select#' + prop);
+		var input = clonedForm.find('#' + prop);
 		if (input.length != 0) {
 			// for populating select tags
 			if (input.prop('tagName') == 'SELECT') {
@@ -70,6 +70,7 @@ function addCourse(e) {
 	var clonedForm = $('#add-edit-form').clone();
 	var id = $(e.currentTarget).attr('id');
 	var course = courses[id];
+	setCurrentDate(clonedForm);
 	openNewCourseDialog(clonedForm, function (newCourse) {
 		courses.push(newCourse);
 		renderCourses(courses);
@@ -100,4 +101,15 @@ function openNewCourseDialog(form, callback) {
 	});
 }
 
+function setCurrentDate(form) {
+	dateInputs = $(form.find('input[type=date]'));
+	var today = new Date();
+	var month = twoDigitFormat(today.getMonth()+1);
+	var day = twoDigitFormat(today.getDate());
+	today = today.getFullYear() + '-' + month + '-' + day;
+	dateInputs.val(today);
+}
 
+function twoDigitFormat(n) {
+	return n >= 10 ? n : "0" + n;
+}
