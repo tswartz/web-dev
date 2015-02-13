@@ -7,6 +7,7 @@ $(function () {
 	renderCourses(courses);
 	$('#courses-created').on('click', 'button.remove', removeCourse);
 	$('#courses-created').on('click', 'button.edit', editCourse);
+	$('.courses-created-table').on('click', 'button.add', addCourse);
 });
 
 function renderCourses(courses) {
@@ -59,13 +60,26 @@ function editCourse(e) {
 			}
 		}
 	};
-	openNewCourseDialog(clonedForm);
+	openNewCourseDialog(clonedForm, function (updatedCourse) {
+		courses[id] = updatedCourse;
+		renderCourses(courses);
+	});
+}
+
+function addCourse(e) {
+	var clonedForm = $('#add-edit-form').clone();
+	var id = $(e.currentTarget).attr('id');
+	var course = courses[id];
+	openNewCourseDialog(clonedForm, function (newCourse) {
+		courses.push(newCourse);
+		renderCourses(courses);
+	});
 }
 
 function openNewCourseDialog(form, callback) {
 	bootbox.dialog({
 		title: "Create New Course",
-	  	message: $(form).html(),
+	  	message: form,
 	  	buttons: [
 	  		{
 		    	label: "Cancel",
@@ -73,11 +87,15 @@ function openNewCourseDialog(form, callback) {
 		    {
 		    	label: "OK",
 		      	className: "btn-primary",
-		      	callback: function(e) {
-		      		$('.modal-body #add-edit-form').find('input');
-		      		callback();
+		      	callback: function (e) {
+		      		var serializedArray = $('.modal-body #add-edit-form').serializeArray();
+		      		var course = {};
+		      		serializedArray.map(function (pair) {
+		      			course[pair.name] = pair.value;
+		      		});
+		      		callback(course);
 		      	}
-		    },
+		    }
 	  	]
 	});
 }
