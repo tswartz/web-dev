@@ -130,6 +130,20 @@ My name is Talia. This is my webpage for CS 4550. Below are links to the assignm
 			<a href="fileview/default.aspx?~/assignments/css/styles.css" target="_blank">CSS Source Code</a>
 		</div>
 	</li>
+	<li>
+		<div>
+			<a href="assignments/jquery/profile.html" target="_blank">jQuery Assignment</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/jquery/profile.html" target="_blank">HTML Source Code</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/jquery/styles.css" target="_blank">CSS Source Code</a>
+		</div>
+		<div>
+			<a href="fileview/default.aspx?~/assignments/jquery/script.js" target="_blank">JS Source Code</a>
+		</div>
+	</li>
 
 </ol>
 
