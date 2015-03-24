@@ -35,7 +35,10 @@ function ($scope, $http)
     		return;
     	}
     	$('#courseModal').modal('hide');
-    	console.log("adding", newCourse);
+    	$http.post('/courses', newCourse).
+		success(function(response) {
+			$scope.courses = response;
+		});
     };
 
     $scope.removeCourse = function(course) {
