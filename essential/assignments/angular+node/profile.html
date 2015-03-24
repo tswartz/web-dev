@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	    <title>Profile</title>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link href="styles.css" rel="stylesheet">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="bootbox.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  		<script type="text/javascript" src="script.js"></script>
+  	</head>
+
+  	<body>
+    	<div class="container">
+      		<header>
+			  	<nav class="navbar navbar-inverse navbar-fixed-top">
+			      	<div class="container">
+				        <div class="navbar-header">
+				          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					            <span class="sr-only">Toggle navigation</span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+				          	</button>
+				          	<a class="navbar-brand" href="#">OnlineU</a>
+				        </div>
+				        <div id="navbar" class="collapse navbar-collapse">
+				          	<ul class="nav navbar-nav">
+					            <li >
+					            	<a href="#">Home</a>
+					            </li>
+					            <li>
+					            	<a href="#">About</a>
+					            </li>
+					            <li>
+					            	<a href="#">Catalog</a>
+					            </li>
+					            <li class="active">
+					            	<a href="#">Profile</a>
+					            </li>
+				           	</ul>
+				          	<ul class="nav navbar-nav navbar-right">
+					            <li>
+									<a href="#">Logout</a>
+								</li>
+								<li>
+									<a href="#">Blog</a>
+								</li>
+				          	</ul>
+				        </div>
+			      	</div>
+			    </nav>
+	      	</header>
+      		<main>
+				<h1>Profile</h1>
+				<hr/>
+				<form class="profile-form">
+					<div>
+						<label for="first-name">First Name</label>
+						<input id="first-name" type="text" name="first-name" placeholder="First Name">
+					</div>
+					<div>
+						<label for="last-name">Last Name</label>
+						<input id="last-name" type="text" name="last-name" placeholder="Last Name">
+					</div>
+					<div>
+						<label for="email">Email</label>
+						<input id="email" type="email" name="email" placeholder="Email">
+					</div>
+					<div>
+						<label for="password">Password</label>
+						<input id="password" type="password" name="password" placeholder="Password">
+					</div>
+					<button class="btn btn-primary" type="submit">Update</button>
+				</form>
+				<h2>Courses Created</h2>
+				<table class="courses-created-table">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Category</th>
+							<th>Created</th>
+							<th>
+								<button class="btn btn-success add">
+									<i class="fa fa-plus"></i>
+								</button>
+							</th>
+						</tr>
+					</thead>
+					<tbody id="courses-created">
+						<tr class="template">
+							<td class="name"></td>
+							<td class="category"></td>
+							<td class="dateCreated"></td>
+							<td>
+								<button class="btn btn-primary edit">
+									<i class="fa fa-pencil"></i>
+								</button>
+								<button class="btn btn-danger remove">
+									<i class="fa fa-times"></i>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</main>
+    	</div>
+
+    	<div hidden="true" id="add-edit-dialog">
+			<form id="add-edit-form">
+				<div>
+    				<label for="name">Course Name:</label>
+    				<input id="name" name="name" type="text">
+    			</div>
+    			<div>
+    				<label for="category">Category:</label>
+    				<select id="category" name="category" placeholder="">
+    					<option value="">Select One</option>
+    					<option value="PROG">Programming</option>
+    					<option value="DB">Database</option>
+    					<option value="WEB">Web Development</option>
+    				</select>
+    			</div>
+    			<div>
+    				<label for="dateCreated">Date Created:</label>
+    				<input id="dateCreated" name="dateCreated" type="date">
+    			</div>
+    			<div>
+    				<label for="description">Description:</label>
+    				<input id="description" name="description" type="textarea">
+    			</div>
+    		</form>
+    	</div>
+  	</body>
+</html>
+
+
