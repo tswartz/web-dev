@@ -56,31 +56,10 @@ main {
 	margin-left: 15%;
 }
 
-/* Courses Created Table */
-
-.courses-created-table {
-	width: 100%;
-	border-collapse:collapse;
+table td button {
+	margin: 3px;
 }
 
-.courses-created-table tr {
-	height: 40px;
-}
-
-.courses-created-table td:first-child, th:first-child {
-	text-align: left;
-}
-
-.courses-created-table td:last-child, th:last-child {
-	text-align: right;
-	padding: 5px;
-}
-
-.courses-created-table tbody tr:nth-child(odd) {
-	background: #f9f9f9;
-	border: solid #d8d8d8;
-	border-width: 2px 0px;
-}
 
 /* Custom Mobile Styling */
 
@@ -102,16 +81,16 @@ main {
 
 /* Edit/Add Dialog */
 
-#add-edit-form {
+.modal-body {
 	width: 400px;
 	margin: 0px auto;
 }
 
-#add-edit-form div {
+.modal-body div {
 	margin: 10px 0px;
 	text-align: right;
 }
 
-#add-edit-form input, #add-edit-form select {
-	width: 300px;
+.modal-body input, .modal-body select {
+	width: 270px;
 }
