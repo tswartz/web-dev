@@ -6,7 +6,7 @@ function ($scope, $http)
 
     $scope.editCourse = function(course) {
     	$scope.newCourse = { name : "farts", category : "PROG", dateCreated : "2015-01-18", description : "cool" };
-    	$('#myModal').modal('show');
+    	$('#courseModal').modal('show');
     };
 
     $scope.removeCourse = function(course) {
