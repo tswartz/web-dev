@@ -4,8 +4,9 @@ app.controller("OnlineUniversityController",
 function ($scope, $http)
 {
 
-	$scope.openEditCourseDialog = function(course) {
+	$scope.openEditCourseDialog = function(course, index) {
 		$scope.submitCourse = $scope.editCourse;
+		$scope.editIndex = index;
 		course.dateCreated = new Date(course.dateCreated);
 		$scope.newCourse = course;
 		$('#courseModal').modal('show');
@@ -22,12 +23,15 @@ function ($scope, $http)
 		$('#courseModal').modal('show');
 	};
 
-    $scope.editCourse = function(newCourse) {
+    $scope.editCourse = function(updatedCourse) {
     	if ($scope.form.$invalid) {
     		return;
     	}
     	$('#courseModal').modal('hide');
-    	console.log("editing", newCourse);
+    	$http.put('/api/course/' + $scope.editIndex, updatedCourse).
+		success(function(response) {
+			$scope.courses = response;
+		});
     };
 
     $scope.addCourse = function(newCourse) {

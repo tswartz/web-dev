@@ -100,7 +100,7 @@
 					            <td>{{course.category}}</td>
 					            <td>{{formatDate(course.dateCreated)}}</td>
 					            <td>
-									<button class="btn btn-primary edit pull-right" ng-click="openEditCourseDialog(course)">
+									<button class="btn btn-primary edit pull-right" ng-click="openEditCourseDialog(course, $index)">
 										<i class="fa fa-pencil"></i>
 									</button>
 									<button class="btn btn-danger remove pull-right" ng-click="removeCourse(course, $index)">

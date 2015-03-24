@@ -33,9 +33,11 @@ app.delete('/api/course/:index', function(req,res) {
 	res.json(courses);
 });
 
-// PUT
-// /api/course/:index
-// accepts a JSON course object, updates object at index, returns all courses
-
+app.put('/api/course/:index', function(req,res) {
+	var index = req.params.index;
+	var updatedCourse = req.body;
+	courses[index] = updatedCourse;
+	res.json(courses);
+});
 
 app.listen(3000);
