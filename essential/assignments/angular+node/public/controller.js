@@ -5,15 +5,16 @@ function ($scope, $http)
 {
 
 	$scope.openEditCourseDialog = function(course) {
+		$scope.submitCourse = $scope.editCourse;
+		course.dateCreated = new Date(course.dateCreated);
 		$scope.newCourse = course;
-		$('#submit-course').attr('ng-click', 'editCourse(newCourse)');
 		$('#courseModal').modal('show');
 	};
 
 	$scope.openAddCourseDialog = function() {
+		$scope.submitCourse = $scope.addCourse;
 		var today = new Date();
 		$scope.newCourse = {name: "", category:"", dateCreated : today, description: ""};
-		$('#submit-course').attr('ng-click', 'addCourse(newCourse)');
 		$('#courseModal').modal('show');
 	};
 
@@ -21,24 +22,24 @@ function ($scope, $http)
     	console.log("editing", newCourse);
     };
 
+    $scope.addCourse = function(newCourse) {
+    	console.log("adding", newCourse);
+    };
+
     $scope.removeCourse = function(course) {
     	console.log("removing", course);
     };
-
-    $scope.addCourse = function(newCourse) {
-    	console.log("adding", newCourse);
-    }
 
     $scope.formatDate = function(date) {
 		date = new Date(date);
 		var month = twoDigitFormat(date.getMonth()+1);
 		var day = twoDigitFormat(date.getDate());
 		return month + '/' + day + '/' + date.getFullYear();
-	}
+	};
 
 	twoDigitFormat = function(n) {
 		return n >= 10 ? n : "0" + n;
-	}
+	};
 
     $http.get("/courses")
     .success( function(response) {
