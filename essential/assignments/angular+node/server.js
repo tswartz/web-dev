@@ -12,29 +12,26 @@ var courses = [
 	{ name : "Java 234", category : "PROG", dateCreated : "Tue Mar 24 2015 10:49:58 GMT-0400 (EDT)", description : "Awesome" }
 ];
 
-app.get('/courses', function(req,res) {
+app.get('/api/courses', function(req,res) {
 	res.json(courses);
 });
 
-app.get('/courses/:index', function(req,res) {
+app.get('/api/courses/:index', function(req,res) {
 	var index = req.params.index;
 	res.json(courses[index]);
 });
 
-app.post('/courses', function(req,res) {
+app.post('/api/courses', function(req,res) {
 	var newCourse = req.body;
 	courses.push(newCourse);
 	res.json(courses);
 });
 
-
-// POST
-// /api/course
-// accepts a JSON course object, adds it to the array, returns all courses
-
-// DELETE
-// /api/course/:index
-// removes course at index, returns all remaining courses
+app.delete('/api/course/:index', function(req,res) {
+	var index = req.params.index;
+	courses.splice(index, 1);
+	res.json(courses);
+});
 
 // PUT
 // /api/course/:index

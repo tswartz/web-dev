@@ -35,14 +35,17 @@ function ($scope, $http)
     		return;
     	}
     	$('#courseModal').modal('hide');
-    	$http.post('/courses', newCourse).
+    	$http.post('/api/courses', newCourse).
 		success(function(response) {
 			$scope.courses = response;
 		});
     };
 
-    $scope.removeCourse = function(course) {
-    	console.log("removing", course);
+    $scope.removeCourse = function(course, index) {
+    	$http.delete('/api/course/' + index).
+		success(function(response) {
+			$scope.courses = response;
+		});
     };
 
     $scope.formatDate = function(date) {
@@ -56,7 +59,7 @@ function ($scope, $http)
 		return n >= 10 ? n : "0" + n;
 	};
 
-    $http.get("/courses")
+    $http.get("/api/courses")
     .success( function(response) {
     	$scope.courses = response;
     });
