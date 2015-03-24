@@ -82,15 +82,20 @@ table td button {
 /* Edit/Add Dialog */
 
 .modal-body {
-	width: 400px;
+	width: 430px;
 	margin: 0px auto;
 }
 
-.modal-body div {
+.modal-body > div {
 	margin: 10px 0px;
 	text-align: right;
 }
 
 .modal-body input, .modal-body select {
-	width: 270px;
+	width: 260px;
+}
+
+.form-error-msg {
+	text-align: left;
+	color: red;
 }

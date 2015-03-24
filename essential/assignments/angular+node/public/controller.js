@@ -13,16 +13,28 @@ function ($scope, $http)
 
 	$scope.openAddCourseDialog = function() {
 		$scope.submitCourse = $scope.addCourse;
+		if ($scope.form) {
+	    	$scope.form.$setPristine();
+	      	$scope.form.$setUntouched();
+	    }
 		var today = new Date();
 		$scope.newCourse = {name: "", category:"", dateCreated : today, description: ""};
 		$('#courseModal').modal('show');
 	};
 
     $scope.editCourse = function(newCourse) {
+    	if ($scope.form.$invalid) {
+    		return;
+    	}
+    	$('#courseModal').modal('hide');
     	console.log("editing", newCourse);
     };
 
     $scope.addCourse = function(newCourse) {
+    	if ($scope.form.$invalid) {
+    		return;
+    	}
+    	$('#courseModal').modal('hide');
     	console.log("adding", newCourse);
     };
 
