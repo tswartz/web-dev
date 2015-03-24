@@ -10,8 +10,8 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="angular.min.js"></script>
-		<script src="bootstrap.min.js"></script>
 		<script src="bootbox.min.js"></script>
 		<link rel="stylesheet" href="bootstrap.min.css">
   		<script src="controller.js"></script>
@@ -89,7 +89,7 @@
 								<th>Category</th>
 								<th>Created</th>
 								<th>
-									<button class="btn btn-success add">
+									<button class="btn btn-success add" data-toggle="modal" data-target="#myModal">
 										<i class="fa fa-plus"></i>
 									</button>
 								</th>
@@ -111,34 +111,47 @@
 					        </tr>
 					    </tbody>
 					</table>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					      </div>
+					      <div class="modal-body">
+						        <div>
+									<label for="name">Course Name:</label>
+									<input id="name" name="name" type="text" ng-model="newCourse.name">
+								</div>
+								<div>
+									<label for="category">Category:</label>
+									<select id="category" name="category" placeholder="" ng-model="newCourse.category">
+										<option value="">Select One</option>
+										<option value="PROG">Programming</option>
+										<option value="DB">Database</option>
+										<option value="WEB">Web Development</option>
+									</select>
+								</div>
+								<div>
+									<label for="dateCreated">Date Created:</label>
+									<input id="dateCreated" name="dateCreated" type="date" ng-model="newCourse.dateCreated">
+								</div>
+								<div>
+									<label for="description">Description:</label>
+									<input id="description" name="description" type="textarea" ng-model="newCourse.description">
+								</div>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary" ng-click="addCourse(newCourse)">Save changes</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
 				</div>
 			</main>
-    	</div>
-
-    	<div hidden="true" id="add-edit-dialog">
-			<form id="add-edit-form">
-				<div>
-    				<label for="name">Course Name:</label>
-    				<input id="name" name="name" type="text">
-    			</div>
-    			<div>
-    				<label for="category">Category:</label>
-    				<select id="category" name="category" placeholder="">
-    					<option value="">Select One</option>
-    					<option value="PROG">Programming</option>
-    					<option value="DB">Database</option>
-    					<option value="WEB">Web Development</option>
-    				</select>
-    			</div>
-    			<div>
-    				<label for="dateCreated">Date Created:</label>
-    				<input id="dateCreated" name="dateCreated" type="date">
-    			</div>
-    			<div>
-    				<label for="description">Description:</label>
-    				<input id="description" name="description" type="textarea">
-    			</div>
-    		</form>
     	</div>
   	</body>
 </html>
