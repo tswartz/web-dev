@@ -3,11 +3,22 @@ var courses = [
 	{ name : "Java 234", category : "PROG", dateCreated : "2015-01-18", description : "Awesome" }
 ];
 
-$(function () {
-	renderCourses(courses);
-	$('#courses-created').on('click', 'button.remove', removeCourse);
-	$('#courses-created').on('click', 'button.edit', editCourse);
-	$('.courses-created-table').on('click', 'button.add', addCourse);
+var app = angular.module("OnlineUniversity", []);
+
+app.controller("OnlineUniversityController",
+function ($scope, $http)
+{
+    $scope.courses = courses;
+
+    $scope.editCourse = function(course) {
+    	console.log("editing", course);
+    };
+
+    $scope.removeCourse = function(course) {
+    	console.log("removing", course);
+    };
+
+
 });
 
 function renderCourses(courses) {
