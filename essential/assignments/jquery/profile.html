@@ -18,6 +18,7 @@
 
   	<body>
     	<div class="container">
+    		<!-- NAVIGATION BAR -->
       		<header>
 			  	<nav class="navbar navbar-inverse navbar-fixed-top">
 			      	<div class="container">
@@ -57,6 +58,7 @@
 			      	</div>
 			    </nav>
 	      	</header>
+	      	<!-- MAIN CONTENT -->
       		<main>
 				<h1>Profile</h1>
 				<hr/>
@@ -80,6 +82,7 @@
 					<button class="btn btn-primary" type="submit">Update</button>
 				</form>
 				<h2>Courses Created</h2>
+				<!-- COURSES CREATED TABLE WITH BLANK ROW (content will be inserted dynamically) -->
 				<table class="courses-created-table">
 					<thead>
 						<tr>
@@ -112,6 +115,7 @@
 			</main>
     	</div>
 
+    	<!-- CONTENT FOR ADD/EDIT DIALOG, HIDDEN ON PAGE LOAD AND THEN SHOWN USING BOOTBOX LIBRARY -->
     	<div hidden="true" id="add-edit-dialog">
 			<form id="add-edit-form">
 				<div>
