@@ -3,6 +3,11 @@ var app = angular.module("OnlineUniversity", []);
 app.controller("OnlineUniversityController",
 function ($scope, $http)
 {
+	// opens confirmation modal to remove course
+	$scope.openRemoveCourseDialog = function(course, index) {
+		$scope.removeIndex = index;
+		$('#removeCourseModal').modal('show');
+	};
 
 	// opens modal to edit course (populates inputs with clicked course)
 	$scope.openEditCourseDialog = function(course, index) {
@@ -10,7 +15,7 @@ function ($scope, $http)
 		$scope.editIndex = index;
 		course.dateCreated = new Date(course.dateCreated);
 		$scope.newCourse = course;
-		$('#courseModal').modal('show');
+		$('#editCourseModal').modal('show');
 	};
 
 	// opens modal to add a course (populates dateCreated with today's date)
@@ -22,7 +27,7 @@ function ($scope, $http)
 	    }
 		var today = new Date();
 		$scope.newCourse = {name: "", category:"", dateCreated : today, description: ""};
-		$('#courseModal').modal('show');
+		$('#editCourseModal').modal('show');
 	};
 
 	// updates course at $scope.editIndex
@@ -30,7 +35,7 @@ function ($scope, $http)
     	if ($scope.form.$invalid) {
     		return;
     	}
-    	$('#courseModal').modal('hide');
+    	$('#editCourseModal').modal('hide');
     	$http.put('/api/course/' + $scope.editIndex, updatedCourse).
 		success(function(response) {
 			$scope.courses = response;
@@ -42,7 +47,7 @@ function ($scope, $http)
     	if ($scope.form.$invalid) {
     		return;
     	}
-    	$('#courseModal').modal('hide');
+    	$('#editCourseModal').modal('hide');
     	$http.post('/api/courses', newCourse).
 		success(function(response) {
 			$scope.courses = response;
@@ -50,8 +55,9 @@ function ($scope, $http)
     };
 
     // removes course at index
-    $scope.removeCourse = function(course, index) {
-    	$http.delete('/api/course/' + index).
+    $scope.removeCourse = function() {
+    	$('#removeCourseModal').modal('hide');
+    	$http.delete('/api/course/' + $scope.removeIndex).
 		success(function(response) {
 			$scope.courses = response;
 		});
