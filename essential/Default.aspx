@@ -16,21 +16,41 @@
         <link rel="stylesheet" href="defaultstyles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="javascript/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+        <script src="defaultcontroller.js"></script>
     </head>
 
-    <body>
+    <body ng-app="DefaultApp">
         <header>
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Talia Swartz</a>
+                    <a class="navbar-brand" href="#/home">Talia Swartz</a>
                 </div>
-                <div id="navbar" class="collapse navbar-collapse">
+                <div id="top-navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/assignments">Assignments</a></li>
+                        <li><a href="#/project">Project</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="navbar navbar-inverse navbar-fixed-bottom">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bottom-navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div id="bottom-navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="sitestatistics/" target="_blank">SiteStatistics</a></li>
                         <li><a href="statistics/" target="_blank">Statistics</a></li>
@@ -51,31 +71,7 @@
             <main>
                 <div class="pad">
                     <form id="form1" runat="server">
-                        <h2>CS 4550 Home Page</h2>
-                        <p>My name is Talia. This is my webpage for CS 4550. Below are links to the assignments I have completed.</p>
-                        <img class="headshot" src="homepage_pic.jpg" />
-                        <hr />
-                        <h2>Assignments</h2>
-                        <ol>
-                            <li>
-                                <div><a href="assignments/html/studyList.html" target="_blank">HTML Assignment</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/html/studyList.html" target="_blank">Source Code</a></div>
-                            </li>
-                            <li>
-                                <div><a href="assignments/css/profile.html" target="_blank">CSS Assignment</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/css/profile.html" target="_blank">HTML Source Code</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/css/styles.css" target="_blank">CSS Source Code</a></div>
-                            </li>
-                            <li>
-                                <div><a href="assignments/jquery/profile.html" target="_blank">jQuery Assignment</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/jquery/profile.html" target="_blank">HTML Source Code</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/jquery/styles.css" target="_blank">CSS Source Code</a></div>
-                                <div><a href="fileview/default.aspx?~/assignments/jquery/script.js" target="_blank">JS Source Code</a></div>
-                            </li>
-                            <li>
-                                <div><a href="http://onlineuniversity-tswartz.rhcloud.com/assignments/angular/profile.html" target="_blank">Angular Assignment</a></div>
-                            </li>
-                        </ol>
+                        <div ng-view></div>
                     </form>
                 </div>
             </main>
