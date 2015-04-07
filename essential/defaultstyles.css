@@ -2,7 +2,7 @@ body {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: whitesmoke;
 }
 
@@ -10,12 +10,13 @@ body {
     color: rgb(231, 0, 0) !important;
     text-shadow: none !important;
     padding: 10px;
-    text-transform: uppercase;
+    font-family: 'Courgette', cursive;
     font-size: 27px;
 }
 
-.navbar-brand, h2 {
-    font-family: Rockwell, 'Courier New', Courier, Georgia, Times, 'Times New Roman', serif;
+h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 nav.navbar {
@@ -34,7 +35,8 @@ ul.navbar-nav li a {
 }
 
 ul.navbar-nav li a:hover {
-    color: black !important;
+    color: #9d9d9d !important;
+    text-decoration: underline;
 }
 
 ul.navbar-nav li a:visited {
@@ -45,10 +47,19 @@ ul.navbar-nav li a:visited {
     background: black !important;
 }
 
+.navbar-right {
+    margin-right: 0px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
 .container {
     margin-top: 110px;
     margin-bottom: 100px;
     text-align: center;
+    width: 70%;
 }
 
 img.headshot {
@@ -68,4 +79,8 @@ a {
 
 li {
     margin-bottom: 10px;
+}
+
+.page-text {
+    text-align: justify;
 }

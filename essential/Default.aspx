@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="defaultstyles.css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Courgette" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="javascript/angular.min.js"></script>
@@ -39,29 +40,25 @@
                         <li><a href="#/assignments">Assignments</a></li>
                         <li><a href="#/project">Project</a></li>
                     </ul>
-                </div>
-            </nav>
-            <nav class="navbar navbar-inverse navbar-fixed-bottom">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bottom-navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="bottom-navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="sitestatistics/" target="_blank">SiteStatistics</a></li>
-                        <li><a href="statistics/" target="_blank">Statistics</a></li>
-                        <li><a href="source/" target="_blank">Source</a></li>
-                        <li><a href="search/" target="_blank">Search</a></li>
-                        <li><a href="searchtree/" target="_blank">SearchTree</a></li>
-                        <li><a href="textview/" target="_blank">TextView</a></li>
-                        <li><a href="filelist.aspx" target="_blank">FileList</a></li>
-                        <li><a href="autofile.aspx" target="_blank">AutoFile</a></li>
-                        <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
-                        <li><a href="blog/" target="_blank">Blog</a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a id="drop1" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                Required Links
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="sitestatistics/" target="_blank">SiteStatistics</a></li>
+                                <li><a href="statistics/" target="_blank">Statistics</a></li>
+                                <li><a href="source/" target="_blank">Source</a></li>
+                                <li><a href="search/" target="_blank">Search</a></li>
+                                <li><a href="searchtree/" target="_blank">SearchTree</a></li>
+                                <li><a href="textview/" target="_blank">TextView</a></li>
+                                <li><a href="filelist.aspx" target="_blank">FileList</a></li>
+                                <li><a href="autofile.aspx" target="_blank">AutoFile</a></li>
+                                <li><a href="images/autoimage.aspx" target="_blank">Images</a></li>
+                                <li><a href="blog/" target="_blank">Blog</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </nav>
