@@ -10,7 +10,7 @@ body {
     color: rgb(231, 0, 0) !important;
     text-shadow: none !important;
     padding: 10px;
-    font-family: 'Courgette', cursive;
+    font-family: 'Lobster Two', cursive;
     font-size: 27px;
 }
 
@@ -72,7 +72,7 @@ ol {
 }
 
 a {
-    color: #08f;
+    color: rgb(231, 0, 0);
     font-weight: bold;
     text-decoration: none;
 }

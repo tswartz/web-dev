@@ -11,10 +11,12 @@
     <head>
         <meta charset='utf-8' />
         <title>Talia Swartz - Home Page</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="defaultstyles.css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Courgette" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Lobster+Two" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <script src="javascript/angular.min.js"></script>
