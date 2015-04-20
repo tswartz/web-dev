@@ -84,3 +84,33 @@ li {
 .page-text {
     text-align: justify;
 }
+
+.assignment-section {
+}
+
+.assignment-section > *{
+    display: inline-table;
+}
+
+.assignment-list {
+    text-align: left;
+    width: 75%;
+    margin: 0px auto;
+}
+
+.assignment-name {
+    font-weight: bold;
+}
+
+.assignment-source {
+    color: #9d9d9d;
+    font-size: 13px;
+}
+
+@media (min-width: 500px) {
+
+    .assignment-list {
+        width: 248px;
+    }
+
+}

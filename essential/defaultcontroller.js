@@ -6,7 +6,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'pages/home.html'
     }).
     when('/assignments', {
-        templateUrl: 'pages/assignments.html'
+        templateUrl: 'pages/assignments.html',
+        controller: 'AssignmentsCtrl'
     }).
     when('/project', {
         templateUrl: 'pages/project.html'

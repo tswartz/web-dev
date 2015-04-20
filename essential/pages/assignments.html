@@ -1,5 +1,5 @@
 <h2>My Assignments</h2>
-<ol class="page-text">
+<!-- <ol class="page-text">
     <li>
         <div><a href="assignments/html/studyList.html" target="_blank">HTML Assignment</a></div>
         <div><a href="fileview/default.aspx?~/assignments/html/studyList.html" target="_blank">Source Code</a></div>
@@ -19,4 +19,26 @@
         <div><a href="http://onlineuniversity-tswartz.rhcloud.com/assignments/angular/profile.html" target="_blank">Angular Assignment</a></div>
         <div><a href="https://github.com/tswartz/web-dev/tree/master/essential/assignments/angular" target="_blank">Git Repo</a></div>
     </li>
-</ol>
+</ol> -->
+
+<ul class="assignment-list list-group">
+    <li class="list-group-item" ng-repeat="assignment in assignments">
+        <div class="assignment-section">
+            <span class="fa fa-external-link"></span>
+            <a ng-attr-href="{{assignment.main.link}}" target="_blank">
+                <h4 class="assignment-name">{{assignment.main.name}}</h4>
+            </a>
+        </div>
+        <div class="assignment-section">
+            <span class="fa fa-file-code-o"></span>
+            <div class="source-code-list">
+                <span ng-repeat="sourceFile in assignment.source">
+                    <a class="assignment-source" ng-attr-href="{{sourceFile.link}}" target="_blank">
+                        {{sourceFile.name}}
+                    </a>
+                    <span ng-show="!$last">|</span>
+                </span>
+            </div>
+        </div>
+    </li>
+</ul>
